@@ -1,0 +1,13 @@
+<div class="widget">
+    <h3>HUE Widget</h3>
+    <label>
+      <input type="checkbox" [(ngModel)]="lightOn" (change)="toggleLight()"> Light
+    </label>
+    <div *ngIf="lightOn">
+      <label>
+        Brightness:
+        <input type="range" min="1" max="254" [(ngModel)]="brightness" (change)="setBrightness()">
+      </label>
+    </div>
+    <p>{{ message }}</p>
+  </div>

@@ -2,11 +2,13 @@
   "name": "windows-widget",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "electron": "ng build && electron .",
+  "package": "ng build --prod && electron-builder"
+},
   "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
@@ -27,10 +29,5 @@
     "electron": "^35.0.2",
     "typescript": "~5.7.2"
   },
-  "main": "main.js",
-  "scripts": {
-    "start": "ng serve",
-    "electron": "ng build && electron .",
-    "build": "ng build"
-  }
+  "main": "main.js"
 }
